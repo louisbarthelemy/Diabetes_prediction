@@ -226,13 +226,35 @@ Key findings:
 ## Repository Structure
 
 ```
-.
-├── bias_analysis.ipynb
-├── descriptive_analysis.ipynb
-├── diagnostic_analysis.ipynb
-├── predictive_analysis.ipynb
-├── prescriptive_analysis.ipynb
-├── fairness_analysis.ipynb
-└── README.md
+DIABETES_PREDICTION/
+│
+├── data/                              # Raw dataset used for the analysis
+│   └── diabetes_012_health_indicators_BRFSS2015.csv
+│
+├── notebooks/                         # Jupyter notebooks for step-by-step analysis
+│   ├── 1-bias_analysis.ipynb          # Initial bias and dataset imbalance analysis
+│   ├── 2-descriptive_analysis.ipynb   # Exploratory data analysis (EDA)
+│   ├── 3-diagnostic_analysis.ipynb    # Feature relationship and diagnostic insights
+│   ├── 4-predictive_analysis.ipynb    # Model training and evaluation
+│   ├── 5-prescriptive_analysis.ipynb  # Decision-making recommendations
+│   └── 6-fairness_analysis.ipynb      # Fairness and ethics evaluation of the model
+│
+├── src/                               # Core project source code
+│   ├── __init__.py
+│   ├── analysis.py                    # Analytical utilities and evaluation functions
+│   ├── data_processing.py             # Data cleaning and preprocessing pipeline
+│   ├── modeling.py                    # Machine learning models and training logic
+│   ├── prescriptive_logic.py          # Prescriptive decision-support logic
+│   ├── ethics_audit.py                # Fairness, bias, and ethics checks
+│   └── main.py                        # Main script to run the full pipeline
+│
+├── references/                        # Supporting documentation
+│   └── RDA_final_report.pdf
+│
+├── .env                               # Environment variables (not committed to Git)
+├── .gitignore                         # Git ignored files
+├── requirements.txt                   # Python dependencies
+└── README.md                          # Project documentation
 ```
+
 
